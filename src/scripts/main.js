@@ -6,11 +6,9 @@ const images = document.getElementById('thumbs');
 images.addEventListener('click', (e) => {
   e.preventDefault();
 
-  if (e.target.tagName === 'IMG') {
-    const link = e.target.closest('a');
+  const link = e.target.closest('a');
 
-    if (link) {
-      mainImage.src = link.href;
-    }
+  if (link) {
+    mainImage.src = link.href;
   }
 });
